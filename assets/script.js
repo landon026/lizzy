@@ -1,13 +1,11 @@
+const DEFAULT_URL = "https://teest.videoy.online/";
+
 const params = new URLSearchParams(window.location.search);
-const url = params.get("url");
+const customUrl = params.get("url");
 
-const targetText = document.getElementById("targetUrl");
-const button = document.getElementById("continueBtn");
+const finalUrl = (customUrl && customUrl.startsWith("http"))
+  ? customUrl
+  : DEFAULT_URL;
 
-if (url && url.startsWith("http")) {
-  targetText.textContent = url;
-  button.href = url;
-} else {
-  targetText.textContent = "No valid destination provided";
-  button.style.display = "none";
-}
+document.getElementById("targetUrl").textContent = finalUrl;
+document.getElementById("continueBtn").href = finalUrl;
