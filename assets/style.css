@@ -1,42 +1,70 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
   margin: 0;
-  padding: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #f0f2f5;
+  color: #222;
 }
 
-.container {
-  max-width: 480px;
-  margin: 60px auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 8px;
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: #ffffff;
+  max-width: 420px;
+  width: 90%;
+  padding: 28px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   text-align: center;
 }
 
-h2 {
-  margin-bottom: 15px;
+h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
-.box {
-  background: #f1f1f1;
-  padding: 10px;
+.desc {
   font-size: 14px;
-  word-break: break-all;
-  margin: 15px 0;
+  color: #555;
 }
 
-.btn {
+.info-box {
+  background: #f6f7f9;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 6px;
+  font-size: 13px;
+  word-break: break-all;
+}
+
+.btn-primary {
   display: inline-block;
-  padding: 12px 20px;
+  margin-top: 10px;
+  padding: 12px 18px;
   background: #1877f2;
   color: #fff;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 6px;
+  font-weight: 500;
 }
 
-.note {
+.btn-primary:hover {
+  background: #145dbf;
+}
+
+.small-text {
   font-size: 12px;
-  color: #666;
-  margin-top: 15px;
+  color: #777;
+  margin-top: 12px;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #999;
 }
