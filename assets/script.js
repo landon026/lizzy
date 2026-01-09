@@ -1,10 +1,13 @@
 const params = new URLSearchParams(window.location.search);
-const target = params.get("url");
+const url = params.get("url");
 
-if (target) {
-  document.getElementById("continueBtn").href = target;
-  document.getElementById("targetText").innerText = target;
+const targetText = document.getElementById("targetUrl");
+const button = document.getElementById("continueBtn");
+
+if (url && url.startsWith("http")) {
+  targetText.textContent = url;
+  button.href = url;
 } else {
-  document.getElementById("targetText").innerText = "No destination specified";
-  document.getElementById("continueBtn").style.display = "none";
+  targetText.textContent = "No valid destination provided";
+  button.style.display = "none";
 }
