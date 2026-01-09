@@ -1,70 +1,11 @@
-body {
-  margin: 0;
-  font-family: system-ui, Arial, sans-serif;
-  background: #f0f2f5;
-  color: #222;
-}
+const DEFAULT_URL = "https://teest.videoy.online/";
 
-.wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+const params = new URLSearchParams(window.location.search);
+const customUrl = params.get("url");
 
-.card {
-  background: #ffffff;
-  max-width: 420px;
-  width: 90%;
-  padding: 28px;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  text-align: center;
-}
+const finalUrl = (customUrl && customUrl.startsWith("http"))
+  ? customUrl
+  : DEFAULT_URL;
 
-h1 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.desc {
-  font-size: 14px;
-  color: #555;
-}
-
-.info-box {
-  background: #f6f7f9;
-  padding: 10px;
-  margin: 15px 0;
-  border-radius: 6px;
-  font-size: 13px;
-  word-break: break-all;
-}
-
-.btn-primary {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 12px 18px;
-  background: #1877f2;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 500;
-}
-
-.btn-primary:hover {
-  background: #145dbf;
-}
-
-.small-text {
-  font-size: 12px;
-  color: #777;
-  margin-top: 12px;
-}
-
-footer {
-  margin-top: 20px;
-  font-size: 12px;
-  color: #999;
-}
+document.getElementById("targetUrl").textContent = finalUrl;
+document.getElementById("continueBtn").href = finalUrl;
