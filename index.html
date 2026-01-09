@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>External Resource Notice</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8">
+  <title>External Resource</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-<div class="container">
-  <h2>External Link Information</h2>
+<div class="wrapper">
+  <div class="card">
+    <h1>External Website Notice</h1>
 
-  <p>
-    You are about to visit an external website.
-    This page is provided for navigation purposes only.
-  </p>
+    <p class="desc">
+      You are about to visit an external website.
+      This page is provided to help you navigate safely.
+    </p>
 
-  <div class="box">
-    <p><strong>Destination:</strong></p>
-    <p id="targetText">Loading...</p>
+    <div class="info-box">
+      <span>Destination:</span>
+      <div id="targetUrl">Checking link…</div>
+    </div>
+
+    <a id="continueBtn" class="btn-primary" target="_blank" rel="noopener">
+      Continue to Website
+    </a>
+
+    <p class="small-text">
+      If you trust this destination, click the button above to proceed.
+    </p>
   </div>
 
-  <a id="continueBtn" class="btn" target="_blank">
-    Continue to Website
-  </a>
-
-  <p class="note">
-    If the button does not work, please check the link provided.
-  </p>
+  <footer>
+    <p>© Navigation Page • GitHub Pages</p>
+  </footer>
 </div>
 
 <script src="assets/script.js"></script>
