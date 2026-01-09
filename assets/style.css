@@ -1,11 +1,85 @@
-const DEFAULT_URL = "https://teest.videoy.online/";
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  background: linear-gradient(135deg, #eef2f7, #f9fbfd);
+  color: #1c1e21;
+}
 
-const params = new URLSearchParams(window.location.search);
-const customUrl = params.get("url");
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
 
-const finalUrl = (customUrl && customUrl.startsWith("http"))
-  ? customUrl
-  : DEFAULT_URL;
+.card {
+  background: #ffffff;
+  max-width: 420px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  text-align: center;
+}
 
-document.getElementById("targetUrl").textContent = finalUrl;
-document.getElementById("continueBtn").href = finalUrl;
+.icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #555;
+}
+
+.destination {
+  margin: 18px 0;
+  padding: 12px;
+  background: #f3f5f8;
+  border-radius: 8px;
+  font-size: 13px;
+  word-break: break-all;
+}
+
+.destination span {
+  display: block;
+  font-size: 11px;
+  color: #777;
+  margin-bottom: 4px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 14px 22px;
+  background: #1877f2;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: #155ec0;
+}
+
+.note {
+  font-size: 12px;
+  color: #666;
+  margin-top: 14px;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 11px;
+  color: #999;
+  text-align: center;
+}
