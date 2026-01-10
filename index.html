@@ -4,141 +4,173 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Continue</title>
+<title>Watch Now</title>
 
-<!-- Open Graph (Facebook Safe) -->
-<meta property="og:title" content="Watch Full Content">
-<meta property="og:description" content="Tap continue to proceed safely.">
+<!-- Facebook Open Graph -->
+<meta property="og:title" content="Watch Full Video">
+<meta property="og:description" content="Tap to continue and watch safely on the official site.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://i.imgur.com/8Km9tLL.jpg">
 
 <meta name="robots" content="index, follow">
 
 <style>
-* {
-  box-sizing: border-box;
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Segoe UI,Arial,sans-serif;
+  background:#000;
+  color:#fff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
 }
 
-body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
+.wrapper{
+  width:100%;
+  max-width:430px;
+  background:#111;
 }
 
-.card {
-  width: 90%;
-  max-width: 420px;
-  background: #121212;
-  border-radius: 16px;
-  padding: 28px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-  text-align: center;
-  animation: fadeIn 0.8s ease;
+.video-box{
+  position:relative;
+  width:100%;
+  height:240px;
+  background:url("https://i.imgur.com/8Km9tLL.jpg") center/cover no-repeat;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+.video-box::after{
+  content:"▶";
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-size:72px;
+  color:rgba(255,255,255,0.95);
+  text-shadow:0 0 25px rgba(0,0,0,0.9);
 }
 
-.thumb {
-  width: 100%;
-  height: 200px;
-  border-radius: 12px;
-  background: url("https://i.imgur.com/8Km9tLL.jpg") center/cover no-repeat;
-  position: relative;
-  margin-bottom: 20px;
+.badge{
+  position:absolute;
+  top:12px;
+  left:12px;
+  background:red;
+  padding:4px 8px;
+  font-size:12px;
+  font-weight:bold;
+  border-radius:4px;
 }
 
-.thumb::after {
-  content: "▶";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 56px;
-  color: rgba(255,255,255,0.9);
-  text-shadow: 0 0 20px rgba(0,0,0,0.8);
+.content{
+  padding:22px;
+  text-align:center;
 }
 
-h1 {
-  font-size: 22px;
-  margin: 0 0 10px;
+h1{
+  font-size:22px;
+  margin:0 0 8px;
 }
 
-p {
-  font-size: 14px;
-  color: #ccc;
-  margin-bottom: 22px;
+p{
+  font-size:14px;
+  color:#ccc;
+  margin-bottom:18px;
 }
 
-.progress {
-  width: 100%;
-  height: 6px;
-  background: #2a2a2a;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 22px;
+.countdown{
+  font-size:14px;
+  margin-bottom:14px;
+  color:#aaa;
 }
 
-.progress span {
-  display: block;
-  height: 100%;
-  width: 70%;
-  background: linear-gradient(90deg, #1e90ff, #00c6ff);
+.progress{
+  width:100%;
+  height:6px;
+  background:#222;
+  border-radius:10px;
+  overflow:hidden;
+  margin-bottom:18px;
 }
 
-.btn {
-  display: inline-block;
-  width: 100%;
-  padding: 15px;
-  background: linear-gradient(90deg, #1e90ff, #00c6ff);
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: 0.3s ease;
+.progress span{
+  display:block;
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,#ff0000,#ff9900);
+  animation:load 3s forwards;
 }
 
-.btn:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 20px rgba(30,144,255,0.6);
+@keyframes load{
+  to{width:100%}
 }
 
-.note {
-  margin-top: 18px;
-  font-size: 12px;
-  color: #888;
+.btn{
+  display:block;
+  width:100%;
+  padding:15px;
+  background:#444;
+  color:#888;
+  border-radius:10px;
+  font-size:16px;
+  font-weight:bold;
+  text-decoration:none;
+  pointer-events:none;
+  transition:0.3s;
+}
+
+.btn.active{
+  background:linear-gradient(90deg,#ff0000,#ff9900);
+  color:#fff;
+  pointer-events:auto;
+  box-shadow:0 0 20px rgba(255,0,0,0.6);
+}
+
+.note{
+  margin-top:14px;
+  font-size:12px;
+  color:#777;
 }
 </style>
 </head>
 
 <body>
-<div class="card">
 
-  <div class="thumb"></div>
+<div class="wrapper">
 
-  <h1>Ready to Continue?</h1>
-  <p>Click below to access the full content on the official website.</p>
-
-  <div class="progress">
-    <span></span>
+  <div class="video-box">
+    <div class="badge">LIVE</div>
   </div>
 
-  <a class="btn" href="https://www.playnaw.online" rel="nofollow noopener">
-    Continue
-  </a>
+  <div class="content">
+    <h1>Watch Full Video</h1>
+    <p>This content is available on the official website.</p>
 
-  <div class="note">
-    Safe access · No downloads required
+    <div class="countdown">
+      Preparing secure access…
+    </div>
+
+    <div class="progress">
+      <span></span>
+    </div>
+
+    <a id="btn" class="btn" href="https://www.playnaw.online" rel="nofollow noopener">
+      Continue
+    </a>
+
+    <div class="note">
+      Click to proceed · No registration required
+    </div>
   </div>
 
 </div>
+
+<script>
+setTimeout(function(){
+  document.getElementById("btn").classList.add("active");
+  document.querySelector(".countdown").innerText = "Ready to continue";
+},3000);
+</script>
+
 </body>
 </html>
