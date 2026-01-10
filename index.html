@@ -2,51 +2,89 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Continue to External Website</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<link rel="stylesheet" href="assets/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Continue to Website</title>
+
+<!-- Open Graph for Facebook -->
+<meta property="og:title" content="Continue to Watch">
+<meta property="og:description" content="Click continue to access the full content safely.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://i.imgur.com/8Km9tLL.jpg">
+
+<!-- Basic SEO -->
+<meta name="robots" content="index, follow">
+<meta name="referrer" content="no-referrer-when-downgrade">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f0f0f;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 420px;
+  width: 90%;
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 14px;
+  color: #cccccc;
+  margin-bottom: 25px;
+}
+
+.button {
+  display: inline-block;
+  background: #1e90ff;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #187bcd;
+}
+
+.note {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #888888;
+}
+</style>
 </head>
+
 <body>
+<div class="container">
+  <h1>Ready to Continue?</h1>
+  <p>Click the button below to proceed to the main website.</p>
 
-<div class="page">
-  <div class="card">
+  <a class="button" href="https://www.playnaw.online" rel="nofollow noopener">
+    Continue
+  </a>
 
-    <div class="icon">🔗</div>
-
-    <h1>Leaving This Platform</h1>
-
-    <p class="subtitle">
-      You are about to open an external website.
-      Please confirm before continuing.
-    </p>
-
-    <div class="destination">
-      <span>Destination URL</span>
-      <div id="targetUrl">https://teest.videoy.online/</div>
-    </div>
-
-    <a
-      id="continueBtn"
-      class="btn"
-      href="https://teest.videoy.online/"
-      target="_blank"
-      rel="noopener"
-    >
-      Continue to Website
-    </a>
-
-    <p class="note">
-      Clicking the button will open the destination in a new tab.
-    </p>
-
+  <div class="note">
+    You will be redirected to the official website.
   </div>
-
-  <footer>
-    This navigation page is provided for user convenience.
-  </footer>
 </div>
-
-<script src="assets/script.js"></script>
 </body>
 </html>
