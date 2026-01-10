@@ -143,7 +143,25 @@ p{
       <span></span>
     </div>
 
-    <a id="btn" class="btn" href="https://www.playnaw.online" rel="nofollow noopener">
+    <script>
+const params = new URLSearchParams(window.location.search);
+const target = params.get("to");
+
+let url = "https://www.playnaw.online";
+
+if(target === "video1"){
+  url = "https://www.playnaw.online/p/video-1.html";
+}
+if(target === "drama"){
+  url = "https://www.playnaw.online/p/drama-terbaru.html";
+}
+if(target === "episode5"){
+  url = "https://www.playnaw.online/p/episode-5.html";
+}
+
+document.getElementById("btn").href = url;
+</script>
+
       Continue
     </a>
 
