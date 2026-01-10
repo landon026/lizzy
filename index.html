@@ -26,20 +26,17 @@ body{
   align-items:center;
   min-height:100vh;
 }
-
 .wrapper{
   width:100%;
   max-width:430px;
   background:#111;
 }
-
 .video-box{
   position:relative;
   width:100%;
   height:240px;
   background:url("https://cdn.aceimg.com/20763e321.gif") center/cover no-repeat;
 }
-
 .badge{
   position:absolute;
   top:12px;
@@ -50,29 +47,24 @@ body{
   font-weight:bold;
   border-radius:4px;
 }
-
 .content{
   padding:22px;
   text-align:center;
 }
-
 h1{
   font-size:22px;
   margin:0 0 8px;
 }
-
 p{
   font-size:14px;
   color:#ccc;
   margin-bottom:18px;
 }
-
 .countdown{
   font-size:14px;
   margin-bottom:14px;
   color:#aaa;
 }
-
 .progress{
   width:100%;
   height:6px;
@@ -81,7 +73,6 @@ p{
   overflow:hidden;
   margin-bottom:18px;
 }
-
 .progress span{
   display:block;
   height:100%;
@@ -89,10 +80,7 @@ p{
   background:linear-gradient(90deg,#ff0000,#ff9900);
   animation:load 3s forwards;
 }
-
-@keyframes load{
-  to{width:100%}
-}
+@keyframes load{to{width:100%}}
 
 .btn{
   display:block;
@@ -107,14 +95,12 @@ p{
   pointer-events:none;
   transition:0.3s;
 }
-
 .btn.active{
   background:linear-gradient(90deg,#ff0000,#ff9900);
   color:#fff;
   pointer-events:auto;
   box-shadow:0 0 20px rgba(255,0,0,0.6);
 }
-
 .note{
   margin-top:14px;
   font-size:12px;
@@ -126,7 +112,6 @@ p{
 <body>
 
 <div class="wrapper">
-
   <div class="video-box">
     <div class="badge">LIVE</div>
   </div>
@@ -135,33 +120,12 @@ p{
     <h1>Watch Full Video</h1>
     <p>This content is available on the official website.</p>
 
-    <div class="countdown">
-      Preparing secure access…
-    </div>
+    <div class="countdown">Preparing secure access…</div>
 
-    <div class="progress">
-      <span></span>
-    </div>
+    <div class="progress"><span></span></div>
 
-    <script>
-const params = new URLSearchParams(window.location.search);
-const target = params.get("to");
-
-let url = "https://www.playnaw.online";
-
-if(target === "video1"){
-  url = "https://www.playnaw.online/p/video-1.html";
-}
-if(target === "drama"){
-  url = "https://www.playnaw.online/p/drama-terbaru.html";
-}
-if(target === "episode5"){
-  url = "https://www.playnaw.online/p/episode-5.html";
-}
-
-document.getElementById("btn").href = url;
-</script>
-
+    <!-- BUTTON (FIXED) -->
+    <a id="btn" class="btn" href="#" rel="nofollow noopener">
       Continue
     </a>
 
@@ -169,12 +133,40 @@ document.getElementById("btn").href = url;
       Click to proceed · No registration required
     </div>
   </div>
-
 </div>
 
 <script>
+/* ===============================
+   TARGET MAP (UP TO 100+ PAGES)
+   =============================== */
+
+const targetMap = {
+  "A9kQ2": "https://www.playnaw.online/p/video-1.html",
+  "mT7Xb": "https://www.playnaw.online/p/drama-terbaru.html",
+  "P3eL0": "https://www.playnaw.online/p/episode-5.html",
+  "Zx8R1": "https://www.playnaw.online/p/film-baru.html",
+  "qW2Aa": "https://www.playnaw.online/p/series-1.html"
+
+  // 👉 tambahkan hingga 100 key di sini
+};
+
+/* DEFAULT (AMAN) */
+let finalURL = "https://www.playnaw.online";
+
+/* GET PARAMETER */
+const params = new URLSearchParams(window.location.search);
+const key = params.get("to");
+
+/* MATCH KEY */
+if(key && targetMap[key]){
+  finalURL = targetMap[key];
+}
+
+/* AKTIFKAN TOMBOL SETELAH DELAY */
 setTimeout(function(){
-  document.getElementById("btn").classList.add("active");
+  const btn = document.getElementById("btn");
+  btn.href = finalURL;
+  btn.classList.add("active");
   document.querySelector(".countdown").innerText = "Ready to continue";
 },3000);
 </script>
