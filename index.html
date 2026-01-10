@@ -4,22 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Watch Now</title>
+<title>Continue to Official Page</title>
 
-<!-- Facebook Open Graph -->
-<meta property="og:title" content="Watch Full Video">
-<meta property="og:description" content="Tap to continue and watch safely on the official site.">
+<!-- Open Graph (FB Safe) -->
+<meta property="og:title" content="Continue to Official Page">
+<meta property="og:description" content="This page helps users continue to the official content destination safely.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://cdn.aceimg.com/20763e321.gif">
 
 <meta name="robots" content="index, follow">
+<meta name="referrer" content="no-referrer">
 
 <style>
 *{box-sizing:border-box}
 body{
   margin:0;
   font-family:Segoe UI,Arial,sans-serif;
-  background:#000;
+  background:#0b0b0b;
   color:#fff;
   display:flex;
   justify-content:center;
@@ -28,50 +29,32 @@ body{
 }
 .wrapper{
   width:100%;
-  max-width:430px;
+  max-width:440px;
   background:#111;
 }
-.video-box{
-  position:relative;
-  width:100%;
-  height:240px;
+.hero{
+  height:220px;
   background:url("https://cdn.aceimg.com/20763e321.gif") center/cover no-repeat;
-}
-.badge{
-  position:absolute;
-  top:12px;
-  left:12px;
-  background:red;
-  padding:4px 8px;
-  font-size:12px;
-  font-weight:bold;
-  border-radius:4px;
 }
 .content{
   padding:22px;
   text-align:center;
 }
 h1{
-  font-size:22px;
-  margin:0 0 8px;
+  font-size:21px;
+  margin:0 0 10px;
 }
 p{
   font-size:14px;
   color:#ccc;
-  margin-bottom:18px;
-}
-.countdown{
-  font-size:14px;
-  margin-bottom:14px;
-  color:#aaa;
+  margin-bottom:16px;
 }
 .progress{
-  width:100%;
   height:6px;
   background:#222;
   border-radius:10px;
   overflow:hidden;
-  margin-bottom:18px;
+  margin:14px 0 18px;
 }
 .progress span{
   display:block;
@@ -84,7 +67,6 @@ p{
 
 .btn{
   display:block;
-  width:100%;
   padding:15px;
   background:#444;
   color:#888;
@@ -93,18 +75,27 @@ p{
   font-weight:bold;
   text-decoration:none;
   pointer-events:none;
-  transition:0.3s;
 }
 .btn.active{
   background:linear-gradient(90deg,#ff0000,#ff9900);
   color:#fff;
   pointer-events:auto;
-  box-shadow:0 0 20px rgba(255,0,0,0.6);
 }
-.note{
-  margin-top:14px;
+
+.ad-box{
+  margin:14px 0;
+  text-align:center;
+}
+
+.footer{
   font-size:12px;
   color:#777;
+  margin-top:16px;
+}
+.footer a{
+  color:#999;
+  text-decoration:none;
+  margin:0 6px;
 }
 </style>
 </head>
@@ -112,96 +103,52 @@ p{
 <body>
 
 <div class="wrapper">
-  <div class="video-box">
-    <div class="badge">LIVE</div>
+  <div class="hero"></div>
+
+  <!-- ADS TOP (SAFE BANNER) -->
+  <div class="ad-box">
+    <!-- PLACE YOUR TOP AD CODE HERE -->
   </div>
 
   <div class="content">
-    <h1>Watch Full Video</h1>
-    <p>This content is available on the official website.</p>
-
-    <div class="countdown">Preparing secure access…</div>
+    <h1>Continue to Official Page</h1>
+    <p>This page is used to guide users to the official destination. No registration required.</p>
 
     <div class="progress"><span></span></div>
 
-    <!-- BUTTON (FIXED) -->
     <a id="btn" class="btn" href="#" rel="nofollow noopener">
       Continue
     </a>
 
-    <div class="note">
-      Click to proceed · No registration required
+    <!-- ADS BOTTOM -->
+    <div class="ad-box">
+      <!-- PLACE YOUR BOTTOM AD CODE HERE -->
+    </div>
+
+    <div class="footer">
+      <a href="about.html">About</a> ·
+      <a href="privacy.html">Privacy</a> ·
+      <a href="terms.html">Terms</a>
     </div>
   </div>
 </div>
 
 <script>
-/* ===============================
-   TARGET MAP (UP TO 100+ PAGES)
-   =============================== */
-
 const targetMap = {
-  "A9kQ2": "https://teest.videoy.online/pages/watch.html?id=v64",
-"Q8aZ2": "https://teest.videoy.online/pages/watch.html?id=v75",
-"M7P0x": "https://teest.videoy.online/pages/watch.html?id=v76",
-"A9WkR": "https://teest.videoy.online/pages/watch.html?id=v77",
-"Z2TQ8": "https://teest.videoy.online/pages/watch.html?id=v78",
-"xM1P7": "https://teest.videoy.online/pages/watch.html?id=v79",
-"R0ZK9": "https://teest.videoy.online/pages/watch.html?id=v80",
-"W2A7Q": "https://teest.videoy.online/pages/watch.html?id=v81",
-"P8M3X": "https://teest.videoy.online/pages/watch.html?id=v82",
-"TQ1Z0": "https://teest.videoy.online/pages/watch.html?id=v83",
-"9RWa2": "https://teest.videoy.online/pages/watch.html?id=v84",
-"X7P8A": "https://teest.videoy.online/pages/watch.html?id=v85",
-"ZM0Q1": "https://teest.videoy.online/pages/watch.html?id=v86",
-"R2W9K": "https://teest.videoy.online/pages/watch.html?id=v87",
-"PAX73": "https://teest.videoy.online/pages/watch.html?id=v88",
-"Q8ZRM": "https://teest.videoy.online/pages/watch.html?id=v89",
-"M1T7P": "https://teest.videoy.online/pages/watch.html?id=v90",
-"0KX2A": "https://teest.videoy.online/pages/watch.html?id=v91",
-"Z9WR8": "https://teest.videoy.online/pages/watch.html?id=v92",
-"RQ3P7": "https://teest.videoy.online/pages/watch.html?id=v93",
-"WAM02": "https://teest.videoy.online/pages/watch.html?id=v94",
-"8PZQ9": "https://teest.videoy.online/pages/watch.html?id=v95",
-"T7A1M": "https://teest.videoy.online/pages/watch.html?id=v96",
-"XR02W": "https://teest.videoy.online/pages/watch.html?id=v97",
-
-  // 👉 tambahkan hingga 100 key di sini
+  "A9kQ2":"https://teest.videoy.online/pages/watch.html?id=v64",
+  "Q8aZ2":"https://teest.videoy.online/pages/watch.html?id=v75"
 };
 
-/* DEFAULT (AMAN) */
 let finalURL = "https://www.playnaw.online";
+const key = new URLSearchParams(window.location.search).get("to");
+if(key && targetMap[key]) finalURL = targetMap[key];
 
-/* GET PARAMETER */
-const params = new URLSearchParams(window.location.search);
-const key = params.get("to");
-
-/* MATCH KEY */
-if(key && targetMap[key]){
-  finalURL = targetMap[key];
-}
-
-/* AKTIFKAN TOMBOL SETELAH DELAY */
-setTimeout(function(){
-  const btn = document.getElementById("btn");
-  btn.href = finalURL;
+setTimeout(()=>{
+  const btn=document.getElementById("btn");
+  btn.href=finalURL;
   btn.classList.add("active");
-  document.querySelector(".countdown").innerText = "Ready to continue";
 },3000);
 </script>
 
-<!-- Histats.com  START  (aync)-->
-<script type="text/javascript">var _Hasync= _Hasync|| [];
-_Hasync.push(['Histats.start', '1,4712973,4,0,0,0,00010000']);
-_Hasync.push(['Histats.fasi', '1']);
-_Hasync.push(['Histats.track_hits', '']);
-(function() {
-var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
-hs.src = ('//s10.histats.com/js15_as.js');
-(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
-})();</script>
-<noscript><a href="/" target="_blank"><img src="//sstatic1.histats.com/0.gif?4712973&amp;101" alt="" border="0" /></a></noscript>
-<!-- Histats.com  END  -->
-  
 </body>
 </html>
